@@ -1,4 +1,5 @@
 #! /bin/bash -x
+declare -a arr
 declare -A dictionary
 read a
 read b
@@ -11,4 +12,9 @@ dictionary[0]=$num1
 dictionary[1]=$num2
 dictionary[2]=$num3
 dictionary[4]=$num4
-echo "computation values:" ${dictionary[*]}
+for (( i=0; i<4; i++ ))
+do
+	arr[$i]=${arr[$i]}
+done
+echo ${arr[*]}
+echo ${dictionary[*]}
